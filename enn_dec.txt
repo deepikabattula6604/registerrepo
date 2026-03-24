@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int i, choice;
+
+    printf("\n Please enter a string:\t ");
+    scanf("%99s", str);
+
+    printf("\nPlease choose one options:\n");
+    printf("1 = Encrypt the string.\n");
+    printf("2 = Decrypt the string.\n");
+    
+    scanf("%d", & choice);
+
+    switch (choice) {
+        case 1:
+            for (i = 0;(i<100&&str[i]!='\0');i++) 
+                str[i] =str[i]+3;
+                printf ("\n encrypted string:%s\n",str);
+                break;
+            case 2:
+            for (i = 0;(i<100&&str[i]!='\0');i++) 
+                str[i] =str[i]-3;
+            printf("Decrypt string: %s\n", str);
+            break;
+
+        default:
+            printf("\n error \n");
+    }
+
+return 0 ;
+}
